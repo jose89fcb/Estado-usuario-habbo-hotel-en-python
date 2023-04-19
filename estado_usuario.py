@@ -10,10 +10,10 @@ data = respuesta.json()
 
 estado = data["online"]
 
-translations = {
+esp = {
     "False": "Desconectad@",
     "True": "En línea"
 }
 
-estado = translations[str(estado)]
+estado = esp[str(estado)]
 print(f'Estado:{estado}')
