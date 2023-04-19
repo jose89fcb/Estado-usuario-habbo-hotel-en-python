@@ -1,4 +1,6 @@
 import requests
+from colorama import Back, Fore, init
+init()
 
 
 keko = input("Escribe tú keko: ")
@@ -10,10 +12,11 @@ data = respuesta.json()
 
 estado = data["online"]
 
-esp = {
-    "False": "Desconectad@",
-    "True": "En línea"
+es = {
+    "False":  Fore.RED + "Desconectad@",
+    "True": Fore.GREEN + "En línea"
 }
 
-estado = esp[str(estado)]
-print(f'Estado:{estado}')
+estado = es[str(estado)]
+
+print(f'Estado: {estado}')
